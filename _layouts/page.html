@@ -14,19 +14,9 @@ layout: base
 {%- assign _footer = __return -%}
 
 {%- include snippets/assign.html
-  target=layout.lightbox source0=page.lightbox -%}
-{%- assign _lightbox = __return -%}
-
-{%- include snippets/assign.html
   target = site.data.variables.default.page.full_width
   source0=layout.full_width source1=page.full_width -%}
 {%- assign _full_width = __return -%}
-
-{%- include snippets/assign.html
-  target = site.data.variables.default.page.comment
-  source0=layout.comment source1=page.comment -%}
-{%- assign _comment = __return -%}
-
 
 {%- assign _article_header_excerpt_truncate = include.excerpt_truncate | default: 200 -%}
 
@@ -60,11 +50,7 @@ layout: base
     {%- if _footer == false -%}
       {%- assign _page_main_class = _page_main_class | append: ' hide-footer' -%}
     {%- endif -%}
-    {%- if page.aside -%}
-      {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
-    {%- elsif _full_width -%}
-      {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
-    {%- endif -%}
+    {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
     <div class="{{ _page_main_class }} cell cell--auto">
 
       <div class="page__main-inner">
@@ -182,17 +168,7 @@ layout: base
           <div class ="main">
         {%- endif -%}
             <div class="grid grid--reverse">
-
-              <div class="col-aside d-print-none js-col-aside">
-                {%- if page.aside -%}
-                  <aside class="page__aside js-page-aside">
-                    {%- include aside/toc.html -%}
-                  </aside>
-                {%- endif -%}
-              </div>
-
               <div class="col-main cell cell--auto">
-                {%- include main/top/custom.html -%}
                 {%- if _page_type == 'article' -%}
                   <article itemscope itemtype="http://schema.org/Article">
                 {%- elsif _page_type == 'webpage' -%}
@@ -210,11 +186,7 @@ layout: base
                 {%- endif -%}
 
                     <div class="js-article-content">{{ content }}</div>
-                    {%- if _comment != false -%}
-                      <section class="page__comments d-print-none">{%- include comments.html -%}</section>
-                    {%- endif -%}
                 </article>
-                {%- include main/bottom/custom.html -%}
               </div>
             </div>
 
@@ -232,39 +204,14 @@ layout: base
     </div> {%- comment -%} end grid {%- endcomment -%}
   </div> {%- comment -%} end page__viewport {%- endcomment -%}
 {%- endif -%}
-
-<script>{%- include scripts/lib/modal.js -%}</script>
-{%- if _lightbox == true -%}
-  <div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
-{%- endif -%}
-{%- if _header != false -%}
-  <div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
-{%- endif -%}
 </div>
 
 
 <script>
   {%- include scripts/lib/scroll-to.js -%}
   {%- include scripts/lib/affix.js -%}
-  {%- include scripts/lib/toc.js -%}
-  {%- if _lightbox == true -%}
-    {%- include scripts/lib/gallery.js -%}
-    {%- include scripts/components/lightbox.js -%}
-  {%- endif -%}
-  {%- include scripts/page.js -%}
 </script>
 
 {%- if page.sidebar -%}
 <script>{%- include scripts/components/sidebar.js -%}</script>
 {%- endif -%}
-
-{%- if page.aside -%}
-<script>
-  /* toc must before affix, since affix need to konw toc' height. */
-  {%- if page.aside.toc -%}{%- include scripts/aside/toc.js -%}{%- endif -%}
-  {%- include scripts/aside/affix.js -%}
-</script>
-{%- endif -%}
-
-{%- include markdown-enhancements.html -%}
-{%- include pageview.html -%}
