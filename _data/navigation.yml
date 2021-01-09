@@ -21,11 +21,11 @@ cat-sidebar:
         url:    /cat/grapefruit-tree
 
   - title:      Native Plants
-    children:)
+    children:
       - title:  Piedmont azalea (Rhododendron canescens)
         url:    /cat/piedmont-azalea
         
-          - title:      Non-Native Plants
+  - title:      Non-Native Plants
     children:
       - title:  Camellia Tree
         url:    /cat/camellia-tree
