@@ -15,8 +15,8 @@ Here is two images side-by-side combination:
 | Caption 1 | Caption 2 |
 | ---       | ---       |
 | 
-![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"} | 
-![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"} |
+![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}) | 
+![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}) |
 
 # You can make heading 1 text like this
 ## Heading 2
