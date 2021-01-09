@@ -10,7 +10,7 @@ cat-sidebar:
 
   - title:      Catalog
     children:
-      - title:  About the Catalog
+      - title:  About Loper House
         url:    /cat/about
 
   - title:      Edible Plants
@@ -22,9 +22,14 @@ cat-sidebar:
 
   - title:      Native Plants
     children:
+      - title:  Piedmont azalea (Rhododendron canescens)
+        url:    /cat/piedmont-azalea
+        
+  - title:      Non-Native Plants
+    children:
       - title:  Camellia Tree
         url:    /cat/camellia-tree
-
+        
   - title:      Animals
     children:
       - title:  Raccoon
