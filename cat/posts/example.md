@@ -11,6 +11,13 @@ Here is a photo of mint. This photo is hosted on someone else's website.
 Here is another photo of mint. This photo is hosted on our own website. It is in the assets/images folder.
 ![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"}
 
+Here is two images side-by-side combination:
+| Caption 1 | Caption 2 |
+| ---       | ---       |
+| 
+![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"} | 
+![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"} |
+
 # You can make heading 1 text like this
 ## Heading 2
 ### Heading 3
