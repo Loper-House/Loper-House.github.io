@@ -22,7 +22,7 @@ cat-sidebar:
 
   - title:      Native Plants
     children:
-      - title:  Piedmont azalea (Rhododendron canescens)
+      - title:  Piedmont azalea
         url:    /cat/piedmont-azalea
         
   - title:      Non-Native Plants
