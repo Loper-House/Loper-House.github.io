@@ -12,11 +12,10 @@ Here is another photo of mint. This photo is hosted on our own website. It is in
 ![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"}
 
 Here is two images side-by-side combination:
+
 | Caption 1 | Caption 2 |
 | ---       | ---       |
-| 
-![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}) | 
-![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}) |
+| ![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}) | ![alternate text for mint]({{ "/assets/images/mint.jpg" | prepend: site.baseurl | replace: '//', '/' }}) |
 
 # You can make heading 1 text like this
 ## Heading 2
