@@ -7,4 +7,4 @@ The Loper House was built in 1915, according to the [National Historic Register]
 
 
 
-![alternative text for cover1.jpg]({{ '/assets/images/cover1.jpg' | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"}
+![alternative text for cover1.jpg]({{ '/assets/images/WHD33.jpg' | prepend: site.baseurl | replace: '//', '/' }}){:style="width:100%"}
